@@ -1,5 +1,5 @@
 // material
-import { Box, Grid, Container, Typography } from '@mui/material';
+import { Box, Grid, Container, Typography, Paper } from '@mui/material';
 // components
 // import Page from '../components/Page';
 // import {
@@ -21,9 +21,76 @@ import { Box, Grid, Container, Typography } from '@mui/material';
 
 export default function DashboardWk() {
   return (
-    <div>
-      <p>DashboardWk</p>
-    </div>
+    <Container
+      maxWidth='xl'
+      disableGutters
+      sx={
+        {
+          // outline: '1px solid red',
+        }
+      }
+    >
+      <Grid container spacing={2} sx={{ outline: '1px solid yellow' }}>
+        <Grid item xs={12} md={8} sx={{ outline: '1px solid blue' }}>
+          <Paper
+            sx={{
+              minHeight: '357px',
+            }}
+          >
+            Top Left
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={4} sx={{ outline: '1px solid blue' }}>
+          <Paper
+            sx={{
+              minHeight: '357px',
+            }}
+          >
+            Top Right
+          </Paper>
+        </Grid>
+
+        <Grid
+          container
+          item
+          spacing={2}
+          xs={12}
+          md={4}
+          sx={{ outline: '1px solid blue' }}
+          sx={{
+            minHeight: '357px',
+          }}
+        >
+          <Grid item xs={12}>
+            <Paper sx={{minHeight: 168}}>Sub Top</Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper sx={{minHeight: 168}}>Sub Bottom Left</Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper sx={{minHeight: 168}}>Sub Bottom Right</Paper>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} md={4} sx={{ outline: '1px solid blue' }}>
+          <Paper
+            sx={{
+              minHeight: '357px',
+            }}
+          >
+            Bottom Center
+          </Paper>
+        </Grid>
+        <Grid item xs={12} md={4} sx={{ outline: '1px solid blue' }}>
+          <Paper
+            sx={{
+              minHeight: '357px',
+            }}
+          >
+            Bottom Right
+          </Paper>
+        </Grid>
+      </Grid>
+    </Container>
     // <Page title="Dashboard | Minimal-UI">
     //   <Container maxWidth="xl">
     //     <Box sx={{ pb: 5 }}>

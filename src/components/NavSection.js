@@ -53,7 +53,11 @@ export default function NavSection({ navConfig, ...other }) {
         {navConfig.map((item) => (
           <ListItem key={item.id} disablePadding>
             <ListItemLinkStyle component={NavLink} to={item.path} isActive={match(item.path)}>
-              <Icon src={item.img} sx={{ width: { xs: 41, md: 43 } }} />
+              <Icon
+                src={item.img}
+                srcSet={`${item.retinaImg} 2x`}
+                sx={{ width: { xs: 41, md: 43 } }}
+              />
             </ListItemLinkStyle>
           </ListItem>
         ))}

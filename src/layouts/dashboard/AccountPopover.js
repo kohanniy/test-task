@@ -56,7 +56,7 @@ export default function AccountPopover() {
           }),
         }}
       >
-        <Avatar src={account.avatar} alt='avatar' />
+        <Avatar src={account.avatar} srcSet={`${account.avatar2x} 2x`} alt='avatar' />
       </IconButton>
 
       <MenuPopover

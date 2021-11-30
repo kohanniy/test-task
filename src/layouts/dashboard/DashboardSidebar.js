@@ -20,6 +20,9 @@ const RootStyle = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+  position: 'sticky',
+  top: 0,
+  // left: 0,
   [theme.breakpoints.up('md')]: {
     flexDirection: 'column',
     padding: `${theme.spacing(3.625)} 0 ${theme.spacing(1.5)}`,
