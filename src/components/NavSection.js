@@ -20,10 +20,7 @@ const ListItemLinkStyle = styled((props) => <ListItemButton disableGutters {...p
     backgroundColor: theme.palette.primary.main,
   },
   [theme.breakpoints.up('md')]: {
-    paddingTop: 0,
-    paddingBottom: 0,
-    paddingLeft: theme.spacing(1.5),
-    paddingRight: theme.spacing(1.375),
+    padding: theme.spacing(0, 1.375, 0, 1.5),
     '&:before': {
       top: 0,
       left: 0,

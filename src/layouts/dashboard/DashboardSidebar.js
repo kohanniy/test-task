@@ -16,16 +16,15 @@ const RootStyle = styled('div')(({ theme }) => ({
   flexShrink: 0,
   minWidth: MENU_WIDTH,
   minHeight: MENU_HEIGHT,
-  padding: `0 ${theme.spacing(2.5)}`,
+  padding: theme.spacing(0, 2.5),
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
   position: 'sticky',
   top: 0,
-  // left: 0,
   [theme.breakpoints.up('md')]: {
     flexDirection: 'column',
-    padding: `${theme.spacing(3.625)} 0 ${theme.spacing(1.5)}`,
+    padding: theme.spacing(3.625, 0, 1.5),
   },
 }));
 
