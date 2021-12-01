@@ -4,9 +4,15 @@ function createGradient(color1, color2) {
   return `linear-gradient(to bottom, ${color1}, ${color2})`;
 }
 
+const COMMON = {
+  black: '#000',
+  white: '#fff',
+}
+
 // SETUP COLORS
 const GREY = {
   0: '#FFFFFF',
+  50: '#C5C5C5',
   100: '#F9FAFB',
   200: '#F4F6F8',
   300: '#DFE3E8',
@@ -94,11 +100,14 @@ const palette = {
   // success: { ...SUCCESS },
   // warning: { ...WARNING },
   // error: { ...ERROR },
-  // grey: GREY,
+  grey: GREY,
   // gradients: GRADIENTS,
   // chart: CHART_COLORS,
   // divider: GREY[500_24],
-  // text: { primary: GREY[800], secondary: GREY[600], disabled: GREY[500] },
+  text: {
+    primary: COMMON.black,
+    secondary: COMMON.white,
+    disabled: GREY[500] },
   // background: {
   //   paper: '#fff',
   //   // default: 'linear-gradient(0deg, #1E183C 62.3%, #05060B 93.31%)',

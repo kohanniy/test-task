@@ -2,16 +2,10 @@ function pxToRem(value) {
   return `${value / 16}rem`;
 }
 
-function responsiveFontSizes({ sm, md, lg }) {
+function responsiveFontSizes({ md }) {
   return {
-    '@media (min-width:600px)': {
-      fontSize: pxToRem(sm),
-    },
     '@media (min-width:900px)': {
       fontSize: pxToRem(md),
-    },
-    '@media (min-width:1200px)': {
-      fontSize: pxToRem(lg),
     },
   };
 }
@@ -22,14 +16,14 @@ const typography = {
   fontFamily: FONT_PRIMARY,
   fontWeightLight: 300,
   fontWeightRegular: 400,
-  fontWeightMedium: 600,
+  fontWeightMedium: 500,
   fontWeightBold: 700,
-  // h1: {
-  //   fontWeight: 700,
-  //   lineHeight: 80 / 64,
-  //   fontSize: pxToRem(40),
-  //   ...responsiveFontSizes({ sm: 52, md: 58, lg: 64 }),
-  // },
+  h1: {
+    fontWeight: 700,
+    lineHeight: 1.43,
+    fontSize: pxToRem(28),
+    ...responsiveFontSizes({ md: 30 }),
+  },
   // h2: {
   //   fontWeight: 700,
   //   lineHeight: 64 / 48,
@@ -70,10 +64,12 @@ const typography = {
   //   lineHeight: 22 / 14,
   //   fontSize: pxToRem(14),
   // },
-  // body1: {
-  //   lineHeight: 1.5,
-  //   fontSize: pxToRem(16),
-  // },
+  body1: {
+    fontWeight: 300,
+    fontSize: pxToRem(22),
+    lineHeight: 1.73,
+    ...responsiveFontSizes({ md: 24 }),
+  },
   // body2: {
   //   lineHeight: 22 / 14,
   //   fontSize: pxToRem(14),

@@ -22,6 +22,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   alignItems: 'center',
   position: 'sticky',
   top: 0,
+  zIndex: theme.zIndex.appBar,
   [theme.breakpoints.up('md')]: {
     flexDirection: 'column',
     padding: theme.spacing(3.625, 0, 1.5),

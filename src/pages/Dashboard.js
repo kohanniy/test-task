@@ -10,9 +10,13 @@ import {
   Drawer,
   IconButton,
   useMediaQuery,
+  Collapse,
+  Card,
 } from '@mui/material';
 import { styled, useTheme } from '@mui/material/styles';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import { WelcomeCard } from '../components/_dashboard';
+import Scrollbar from '../components/ScrollBar';
 // components
 // import Page from '../components/Page';
 // import {
@@ -32,92 +36,82 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 // ----------------------------------------------------------------------
 
-
-const DrawerStyle = styled(Drawer, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    flexShrink: 0,
-    whiteSpace: 'nowrap',
-    boxSizing: 'border-box',
-    '& .MuiDrawer-paper': {
-      position: 'static',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: open ? '100%' : 'calc(100% / 3 - 8px)',
-      transition: theme.transitions.create(['width', 'margin'], {
-        easing: theme.transitions.easing.sharp,
-        duration: '0.5s',
-      }),
-    },
-  })
-);
-
-const PaperStyle = styled(Paper, { shouldForwardProp: (prop) => prop !== 'open' })(
-  ({ theme, open }) => ({
-    [theme.breakpoints.up('md')]: {
-      width: open ? 0 : 'calc(2 * 100% / 3 - 8px)',
-      whiteSpace: 'nowrap',
-      transition: theme.transitions.create('width', {
-        easing: theme.transitions.easing.sharp,
-        duration: '0.5s',
-      }),
-    },
-  })
-);
-
-export default function DashboardWk() {
+export default function Dashboard() {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
   const [open, setOpen] = useState(false);
 
-  const toggleDrawer = () => setOpen(!open)
+  const toggleDrawer = () => setOpen(!open);
 
   return (
-    <Container
-      maxWidth='xl'
-      disableGutters
-    >
+    <Container maxWidth='xl' disableGutters>
       <Grid container spacing={2} sx={{ outline: '1px solid yellow' }}>
         <Grid item xs={12} sx={{ outline: '1px solid blue' }}>
           <Stack
-            direction={{ xs: 'column', md: 'row' }}
+            sx={{
+              position: 'relative',
+              maxHeight: {
+                xs: 'auto',
+                md: 357,
+              },
+            }}
+            direction={{
+              xs: 'column',
+              md: 'row',
+            }}
             spacing={{
               xs: 2,
               md: open ? 0 : 2,
             }}
           >
-            <PaperStyle
-              open={open}
+            <WelcomeCard
               sx={{
-                minHeight: '357px',
+                width: {
+                  xs: 1,
+                  md: open ? 0 : 'calc(2 * 100% / 3 - 8px)',
+                },
+                transition: (theme) =>
+                  theme.transitions.create('width', {
+                    easing: theme.transitions.easing.sharp,
+                    duration: '0.5s',
+                  }),
               }}
-            >
-              Top Left
-            </PaperStyle>
-            <DrawerStyle
-              variant='permanent'
-              hideBackdrop
-              anchor={matchesMd ? 'right' : 'top'}
-              open={open}
+            />
+
+            <Card
+              sx={{
+                width: {
+                  xs: 1,
+                  md: open ? '100%' : 'calc(100% / 3 - 8px)',
+                },
+                transition: (theme) =>
+                  theme.transitions.create(['width', 'margin'], {
+                    easing: theme.transitions.easing.sharp,
+                    duration: '0.5s',
+                  }),
+              }}
             >
               <IconButton onClick={toggleDrawer}>
                 <ChevronLeftIcon />
               </IconButton>
-              {
-                !open ? 'Top Right' : (
-                  <Box>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                    <Typography>dsjfks refrefrefe rtergr trtret</Typography>
-                  </Box>
-                )
-              }
-            </DrawerStyle>
+              {open ? (
+                <Box>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                  <Typography>sfghsfdlgh sgfsdgh sfgsdflghdfsjgh</Typography>
+                </Box>
+              ) : (
+                <Box>Top Right</Box>
+              )}
+            </Card>
           </Stack>
         </Grid>
 
