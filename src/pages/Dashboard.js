@@ -1,5 +1,7 @@
 import { Grid, Container, Paper } from '@mui/material';
 import { WelcomeWithChartCards } from '../components/_dashboard';
+import VideoCard from '../components/_dashboard/VideoCard';
+import video from '../assets/video/TestAnimation.mp4';
 
 export default function Dashboard() {
   return (
@@ -39,13 +41,7 @@ export default function Dashboard() {
           </Paper>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <Paper
-            sx={{
-              minHeight: '357px',
-            }}
-          >
-            Bottom Right
-          </Paper>
+          <VideoCard  />
         </Grid>
       </Grid>
     </Container>
