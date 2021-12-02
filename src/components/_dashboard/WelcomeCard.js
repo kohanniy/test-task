@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, CardContent, Typography, Link as MuiLink, useMediaQuery } from '@mui/material';
-import { alpha, useTheme } from '@mui/material/styles';
+import { CardContent, Typography, Link as MuiLink, useMediaQuery } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import Scrollbar from '../ScrollBar';
+import DarkCard from '../DarkCard';
 
 const Link = (props) => (
   <MuiLink
@@ -20,15 +21,9 @@ const Link = (props) => (
 export default function WelcomeCard({ sx = null }) {
   const theme = useTheme();
   const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
+
   return (
-    <Card
-      sx={{
-        bgcolor: alpha('#fff', 0.1),
-        color: 'text.secondary',
-        filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
-        ...sx,
-      }}
-    >
+    <DarkCard sx={sx}>
       <Scrollbar>
         <CardContent
           sx={{
@@ -63,6 +58,6 @@ export default function WelcomeCard({ sx = null }) {
           </Typography>
         </CardContent>
       </Scrollbar>
-    </Card>
+    </DarkCard>
   );
 }

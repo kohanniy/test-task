@@ -23,7 +23,6 @@ const ListItemLinkStyle = styled((props) => <ListItemButton disableGutters {...p
     padding: theme.spacing(0, 1.375, 0, 1.5),
     '&:before': {
       top: 0,
-      left: 0,
       bottom: 0,
       width: 4,
       borderRadius: '0 5px 5px 0'
@@ -31,7 +30,7 @@ const ListItemLinkStyle = styled((props) => <ListItemButton disableGutters {...p
   },
 }));
 
-const Icon = styled((props) => <img {...props} />)({});
+const Icon = styled('img')({});
 
 export default function NavSection({ navConfig, ...other }) {
   const { pathname } = useLocation();
@@ -51,6 +50,7 @@ export default function NavSection({ navConfig, ...other }) {
           <ListItem key={item.id} disablePadding>
             <ListItemLinkStyle component={NavLink} to={item.path} isActive={match(item.path)}>
               <Icon
+                alt='icon'
                 src={item.img}
                 srcSet={`${item.retinaImg} 2x`}
                 sx={{ width: { xs: 41, md: 43 } }}

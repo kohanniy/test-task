@@ -24,12 +24,11 @@ const typography = {
     fontSize: pxToRem(28),
     ...responsiveFontSizes({ md: 30 }),
   },
-  // h2: {
-  //   fontWeight: 700,
-  //   lineHeight: 64 / 48,
-  //   fontSize: pxToRem(32),
-  //   ...responsiveFontSizes({ sm: 40, md: 44, lg: 48 }),
-  // },
+  h2: {
+    fontWeight: 700,
+    lineHeight: 1.2,
+    fontSize: pxToRem(16),
+  },
   // h3: {
   //   fontWeight: 700,
   //   lineHeight: 1.5,
