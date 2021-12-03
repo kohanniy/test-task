@@ -1,7 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 export default function BukWild() {
   return (
-    <div>
-      <p>BukWild</p>
-    </div>
+    <Box>
+      <Typography sx={{ color: 'text.secondary'}}>BukWild</Typography>
+    </Box>
   );
 }

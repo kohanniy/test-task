@@ -38,17 +38,6 @@ export default function GlobalStyles() {
         },
 
         img: { display: 'block', maxWidth: '100%' },
-
-        // Lazy Load Img
-        // '.blur-up': {
-        //   WebkitFilter: 'blur(5px)',
-        //   filter: 'blur(5px)',
-        //   transition: 'filter 400ms, -webkit-filter 400ms',
-        // },
-        // '.blur-up.lazyloaded ': {
-        //   WebkitFilter: 'blur(0)',
-        //   filter: 'blur(0)',
-        // },
       }}
     />
   );

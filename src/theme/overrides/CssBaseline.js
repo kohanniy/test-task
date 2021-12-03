@@ -17,7 +17,7 @@ import HelveticaNeueBoldWoff2 from '../../assets/fonts/HelveticaNeueCyr-Bold.wof
 export default function CssBaseline() {
   return {
     MuiCssBaseline: {
-      styleOverrides: `
+      styleOverrides:`
         @font-face {
           font-family: 'Helvetica Neue';
           font-style: normal;
@@ -27,7 +27,7 @@ export default function CssBaseline() {
                 url(${HelveticaNeueLightWoff2}) format('woff2'),
                 url(${HelveticaNeueLightWoff}) format('woff'),
                 url(${HelveticaNeueLightTTF}) format('truetype');
-        },
+        }
         @font-face {
           font-family: 'Helvetica Neue';
           font-style: normal;
@@ -37,7 +37,7 @@ export default function CssBaseline() {
                 url(${HelveticaNeueRegularWoff2}) format('woff2'),
                 url(${HelveticaNeueRegularWoff}) format('woff'),
                 url(${HelveticaNeueRegularTTF}) format('truetype');
-        },
+        }
         @font-face {
           font-family: 'Helvetica Neue';
           font-style: normal;
@@ -47,7 +47,7 @@ export default function CssBaseline() {
                 url(${HelveticaNeueMediumWoff2}) format('woff2'),
                 url(${HelveticaNeueMediumWoff}) format('woff'),
                 url(${HelveticaNeueMediumTTF}) format('truetype');
-        },
+        }
         @font-face {
           font-family: 'Helvetica Neue';
           font-style: normal;
@@ -57,8 +57,11 @@ export default function CssBaseline() {
                 url(${HelveticaNeueBoldWoff2}) format('woff2'),
                 url(${HelveticaNeueBoldWoff}) format('woff'),
                 url(${HelveticaNeueBoldTTF}) format('truetype');
-        },
+        }
       `,
     },
   };
 }
+
+
+

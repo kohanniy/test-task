@@ -1,5 +1,9 @@
+import { Box, Typography } from '@mui/material';
+
 export default function Page404() {
   return (
-    <div>Not Found</div>
+    <Box>
+      <Typography>Not Found</Typography>
+    </Box>
   );
 }

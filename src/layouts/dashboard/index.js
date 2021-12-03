@@ -16,7 +16,7 @@ const RootStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-const ContentContainerStyle = styled(Container)(({ theme }) => ({
+const ContentContainer = styled(Container)(({ theme }) => ({
   boxSizing: 'border-box',
   maxWidth: '1360px',
   flexGrow: 1,
@@ -33,9 +33,9 @@ export default function DashboardLayout() {
     <RootStyle>
       <DashboardSidebar />
       <Box component='main' flexGrow={1}>
-        <ContentContainerStyle>
+        <ContentContainer>
           <Outlet />
-        </ContentContainerStyle>
+        </ContentContainer>
       </Box>
     </RootStyle>
   );

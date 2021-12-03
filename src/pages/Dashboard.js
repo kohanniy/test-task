@@ -1,7 +1,7 @@
-import { Grid, Container, Paper } from '@mui/material';
-import { WelcomeWithChartCards } from '../components/_dashboard';
-import VideoCard from '../components/_dashboard/VideoCard';
-import video from '../assets/video/TestAnimation.mp4';
+import { Grid, Container, Paper, Typography } from '@mui/material';
+
+import { WelcomeWithChartCards, VideoCard, ReviewsCard } from '../components/_dashboard';
+import CardTemplate from '../components/CardTemplate';
 
 export default function Dashboard() {
   return (
@@ -22,7 +22,14 @@ export default function Dashboard() {
           }}
         >
           <Grid item xs={12}>
-            <Paper sx={{ minHeight: 168 }}>Sub Top</Paper>
+            <ReviewsCard
+              sx={{
+                maxHeight: {
+                  xs: 'auto',
+                  lg: '169px',
+                },
+              }}
+            />
           </Grid>
           <Grid item xs={12} sm={6}>
             <Paper sx={{ minHeight: 168 }}>Sub Bottom Left</Paper>
@@ -32,21 +39,24 @@ export default function Dashboard() {
           </Grid>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <Paper
-            sx={{
-              minHeight: '357px',
-            }}
+          <CardTemplate
+            title='Recent Documents'
+            moreButtonText='7 more documents'
+            sx={{ height: '100%', maxHeight: '357px' }}
           >
-            Bottom Center
-          </Paper>
+            <Typography>sdgsfdg dfsgfdgfd fdgdfsgsdfg</Typography>
+            <Typography>sdgsfdg dfsgfdgfd fdgdfsgsdfg</Typography>
+          </CardTemplate>
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
-          <VideoCard  />
+          <VideoCard />
         </Grid>
       </Grid>
     </Container>
   );
 }
+
+// 207
 
 // const max = 3000;
 // function valueToPercent(value) {

@@ -8,7 +8,7 @@ const Link = (props) => (
   <MuiLink
     underline='none'
     sx={{
-      fontWeight: 'bold',
+      fontWeight: 'medium',
       color: 'common.white',
       '&:hover': {
         color: 'primary.dark',

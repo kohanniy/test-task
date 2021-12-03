@@ -28,6 +28,7 @@ function WelcomeWithChartCards() {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = () => setOpen(!open);
+  
   return (
     <Stack
       sx={{ maxHeight: { xs: 'auto', lg: 357 } }}

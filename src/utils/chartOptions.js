@@ -4,15 +4,11 @@ export const getBaseChartOptions = (theme, colors, labels, series) => {
       background: 'transparent',
       fontFamily: theme.typography.fontFamily,
       foreColor: theme.palette.text.secondary,
-      parentHeightOffset: 0,
-      toolbar: { show: false },
+      // toolbar: { show: false },
       type: 'radialBar',
     },
     colors: Array.isArray(colors) ? colors : [colors],
-    dataLabels: { enabled: false },
-    grid: { show: false },
     labels: Array.isArray(labels) ? labels : [labels],
-    legend: { show: false },
     plotOptions: {
       radialBar: {
         inverseOrder: true,
