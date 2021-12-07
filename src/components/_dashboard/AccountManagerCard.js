@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, Avatar as MuiAvatar, Typography, Button as MuiButton, Box } from '@mui/material';
+import { Avatar as MuiAvatar, Typography, Button as MuiButton, Box } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import CardTemplate from '../CardTemplate';
 
