@@ -10,33 +10,12 @@ export default function GlobalStyles() {
           boxSizing: 'border-box',
         },
         html: {
-          width: '100%',
-          height: '100%',
           WebkitOverflowScrolling: 'touch',
         },
         body: {
-          width: '100%',
-          height: '100%',
           background: 'linear-gradient(0deg, #1E183C 62.3%, #05060B 93.31%)',
+          position: 'relative',
         },
-        '#root': {
-          width: '100%',
-          height: '100%',
-        },
-        input: {
-          '&[type=number]': {
-            MozAppearance: 'textfield',
-            '&::-webkit-outer-spin-button': {
-              margin: 0,
-              WebkitAppearance: 'none',
-            },
-            '&::-webkit-inner-spin-button': {
-              margin: 0,
-              WebkitAppearance: 'none',
-            },
-          },
-        },
-
         img: { display: 'block', maxWidth: '100%' },
       }}
     />

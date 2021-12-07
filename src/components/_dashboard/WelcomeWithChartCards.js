@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Stack } from '@mui/material';
 import WelcomeCard from './WelcomeCard';
 import ChartCard from './ChartCard';
-import { AnimatePresence, motion } from 'framer-motion';
 
 const welcomeCardStyles = (open) => ({
   width: {

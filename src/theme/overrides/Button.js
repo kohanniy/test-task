@@ -6,6 +6,7 @@ export default function Button(theme) {
       styleOverrides: {
         root: {
           borderRadius: theme.shape.buttonBorderRadius,
+          padding: '6px 10px',
         },
       },
       variants: [

@@ -8,11 +8,19 @@ const GREY = {
   50: '#C5C5C5',
   100: '#EDEDED',
   200: '#F8F8F8',
-  300: '#7D7D7D'
+  300: '#7D7D7D',
+  400: '#2D2D2D',
 };
 
 const PRIMARY = {
+  light: '#4DACF6',
   main: '#4D61F6',
+  dark: '#674DF6',
+  contrastText: '#fff',
+};
+
+const GREEN = {
+  main: '#32DBBB',
 };
 
 const PINK = {
@@ -30,13 +38,13 @@ const CHART_COLORS = {
 const palette = {
   common: { ...COMMON },
   primary: { ...PRIMARY },
-  pink: {...PINK},
-  grey: {...GREY},
-  chart: {...CHART_COLORS},
+  green: { ...GREEN },
+  pink: { ...PINK },
+  grey: { ...GREY },
+  chart: { ...CHART_COLORS },
   text: {
     primary: COMMON.black,
     secondary: COMMON.white,
-    disabled: GREY[500],
   },
 };
 

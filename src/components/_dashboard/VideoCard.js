@@ -30,14 +30,14 @@ export default function VideoCard() {
           background: (theme) => alpha(theme.palette.common.black, 0.1),
           '&:last-child': { pb: 0 },
           position: 'absolute',
-          bottom: 55,
+          bottom: 60,
           color: 'text.secondary',
           opacity: 0,
           visibility: 'hidden',
           transition: (theme) => theme.transitions.create(['opacity', 'visibility']),
         }}
       >
-        <Typography variant='h3'>Behind the Scenes</Typography>
+        <Typography variant='h6' component='h2'>Behind the Scenes</Typography>
       </CardContent>
     </Card>
   );

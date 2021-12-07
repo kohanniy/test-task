@@ -7,6 +7,7 @@ import PlusButton from '../../components/PlusButton';
 import AccountPopover from './AccountPopover';
 
 import sidebarConfig from '../../_mocks_/sidebar';
+import SearchButton from '../../components/SearchButton';
 
 const MENU_WIDTH = 66;
 const MENU_HEIGHT = 66;
@@ -40,7 +41,10 @@ export default function DashboardSidebar() {
         <NavSection navConfig={sidebarConfig} />
         <PlusButton />
       </Stack>
-      <AccountPopover />
+      <Stack direction='row' alignItems='center' spacing={1.5}>
+        <AccountPopover />
+        <SearchButton sx={{ width: '40px', height: '40px', display: { md: 'none' } }} />
+      </Stack>
     </RootStyle>
   );
 }
