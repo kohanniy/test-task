@@ -6,7 +6,7 @@ import PlusButton from '../../components/PlusButton';
 
 import AccountPopover from './AccountPopover';
 
-import sidebarConfig from './SidebarConfig';
+import sidebarConfig from '../../_mocks_/sidebar';
 
 const MENU_WIDTH = 66;
 const MENU_HEIGHT = 66;

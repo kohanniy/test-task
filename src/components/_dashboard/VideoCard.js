@@ -10,8 +10,8 @@ export default function VideoCard() {
         height: '100%',
         '&:hover .MuiCardContent-root': {
           opacity: 1,
-          visibility: 'visible'
-        }
+          visibility: 'visible',
+        },
       }}
     >
       <CardMedia

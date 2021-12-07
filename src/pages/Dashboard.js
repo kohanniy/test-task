@@ -1,27 +1,27 @@
-import { Grid, Container, Paper, Typography } from '@mui/material';
+import { Grid, Container, Paper, Typography, Stack } from '@mui/material';
+import { styled } from '@mui/material';
 
-import { WelcomeWithChartCards, VideoCard, ReviewsCard } from '../components/_dashboard';
+import {
+  WelcomeWithChartCards,
+  VideoCard,
+  ReviewsCard,
+} from '../components/_dashboard';
 import CardTemplate from '../components/CardTemplate';
+
 
 export default function Dashboard() {
   return (
-    <Container maxWidth='xl' disableGutters>
-      <Grid container spacing={2}>
-        <Grid item xs={12}>
-          <WelcomeWithChartCards />
-        </Grid>
+    <Grid container spacing={2.5}>
+      <Grid
+        item
+        xs={12}
+        sx={{ height: { lg: 395 } }}
+      >
+        <WelcomeWithChartCards sx={{ height: '100%' }} />
+      </Grid>
 
-        <Grid
-          container
-          item
-          spacing={2}
-          xs={12}
-          lg={4}
-          sx={{
-            minHeight: '357px',
-          }}
-        >
-          <Grid item xs={12}>
+      {/* <Grid item xs={12} lg={4} container spacing={2.5}>
+          <Grid item xs={12} md={4} lg={12}>
             <ReviewsCard
               sx={{
                 maxHeight: {
@@ -31,13 +31,14 @@ export default function Dashboard() {
               }}
             />
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={4} lg={6}>
             <Paper sx={{ minHeight: 168 }}>Sub Bottom Left</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} md={4} lg={6}>
             <Paper sx={{ minHeight: 168 }}>Sub Bottom Right</Paper>
           </Grid>
         </Grid>
+
         <Grid item xs={12} md={6} lg={4}>
           <CardTemplate
             title='Recent Documents'
@@ -50,9 +51,8 @@ export default function Dashboard() {
         </Grid>
         <Grid item xs={12} md={6} lg={4}>
           <VideoCard />
-        </Grid>
-      </Grid>
-    </Container>
+        </Grid> */}
+    </Grid>
   );
 }
 

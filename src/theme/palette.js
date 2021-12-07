@@ -31,8 +31,8 @@ const palette = {
   common: { ...COMMON },
   primary: { ...PRIMARY },
   pink: {...PINK},
-  grey: GREY,
-  chart: CHART_COLORS,
+  grey: {...GREY},
+  chart: {...CHART_COLORS},
   text: {
     primary: COMMON.black,
     secondary: COMMON.white,

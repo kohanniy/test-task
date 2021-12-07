@@ -1,63 +1,73 @@
 import React from 'react';
-import { CardContent, Typography, Link as MuiLink, useMediaQuery } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
-import Scrollbar from '../ScrollBar';
+import { CardContent as MuiCardContent, Typography, Link as MuiLink } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import DarkCard from '../DarkCard';
 
-const Link = (props) => (
-  <MuiLink
-    underline='none'
-    sx={{
-      fontWeight: 'medium',
-      color: 'common.white',
-      '&:hover': {
-        color: 'primary.dark',
-      },
-    }}
-    {...props}
-  />
-);
+const CardContent = styled(MuiCardContent)(({ theme }) => ({
+  paddingLeft: '30px',
+  paddingTop: '32px',
+  paddingBottom: '40px',
+  paddingRight: '25px',
+  '&:last-child': {
+    paddingBottom: '40px',
+  },
 
-export default function WelcomeCard({ sx = null }) {
-  const theme = useTheme();
-  const matchesMd = useMediaQuery(theme.breakpoints.up('md'));
+  [theme.breakpoints.up('md')]: {
+    paddingTop: '55px',
+    paddingLeft: '62px',
+    paddingRight: '59px',
+    paddingBottom: '54px',
 
+    '&:last-child': {
+      paddingBottom: '54px',
+    },
+  },
+
+  [theme.breakpoints.up('lg')]: {
+    position: 'absolute',
+  },
+}));
+
+const Title = styled(Typography)(({ theme }) => ({
+  marginBottom: '5px',
+
+  [theme.breakpoints.up('md')]: {
+    marginBottom: '8px',
+  },
+}));
+
+const Text = styled(Typography)(({ theme }) => ({
+  ...theme.typography.h4,
+  color: theme.palette.grey[50],
+
+  [theme.breakpoints.up('md')]: {
+    fontSize: '30px',
+    lineHeight: theme.typography.h2.lineHeight,
+  },
+}));
+
+const Link = styled((props) => <MuiLink underline='none' {...props} />)(({ theme }) => ({
+  fontWeight: theme.typography.fontWeightMedium,
+  color: theme.palette.text.secondary,
+  '&:hover': {
+    color: theme.palette.primary.dark,
+  },
+}));
+
+export default function WelcomeCard({ sx = null, ...props }) {
   return (
-    <DarkCard sx={sx}>
-      <Scrollbar>
-        <CardContent
-          sx={{
-            px: {
-              xs: 3.125,
-              md: 7.5,
-            },
-            py: {
-              xs: 5,
-              md: 7.5,
-            },
-            '&:last-child': {
-              pb: 7.5,
-            },
-          }}
-        >
-          <Typography variant='h1' sx={{ mb: 2.5 }}>
-            Happy Tuesday, Lily.
-          </Typography>
-          <Typography
-            component='p'
-            variant={matchesMd ? 'h1' : 'body1'}
-            sx={{
-              color: 'grey.50',
-              fontWeight: 'fontWeightLight',
-            }}
-          >
-            Lorem ipsum dolor sit amet, dicam diceret molestiae in his. Eum putent possit ea. Ex mei{' '}
-            <Link href='#'>discere</Link> feugiat, pri ex nisl delicata sapientem, quod bonorum
-            appetere te per. Offendit dissentiunt at nam, <Link href='#'>ea has</Link> illud dolore
-            deseruisse.
-          </Typography>
-        </CardContent>
-      </Scrollbar>
+    <DarkCard sx={sx} {...props}>
+      <CardContent>
+        <Title component='h1' variant='h2'>
+          Happy Tuesday, Lily.
+        </Title>
+        <Text>
+          Lorem ipsum dolor sit amet, dicam diceret molestiae in his. Eum putent possit ea. Ex mei{' '}
+          <Link href='#'>discere</Link> feugiat, pri ex nisl delicata sapientem, quod bonorum
+          appetere te per. Offendit dissentiunt at nam, <Link href='#'>ea has</Link> illud dolore
+          deseruisse.
+        </Text>
+      </CardContent>
     </DarkCard>
   );
 }
