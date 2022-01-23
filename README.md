@@ -9,3 +9,5 @@
 - Framer Motion - анимация
 - ApexCharts - диаграммы
 - React Router Dom - маршрутизация
+
+[Посмотреть в сети](https://dashboard-kohanniy.netlify.app/)
